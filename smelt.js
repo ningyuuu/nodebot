@@ -1,6 +1,6 @@
 const robot = require("robotjs");
 
-const smeltRuns = 30;
+const smeltRuns = 100;
 
 const smeltX = 871;
 const smeltY = 679;
@@ -15,6 +15,6 @@ for (let i = 0; i < smeltRuns; i++) {
     robot.setMouseDelay(Math.random() * 500 + 1500);
     robot.moveMouse(smeltX + 3 * Math.random() - 3, smeltY + 3 * Math.random() - 3);
     robot.mouseClick();
-    robot.setKeyboardDelay(Math.random() * 5000 + 110000);
+    robot.setKeyboardDelay(Math.random() * 5000 + 155000);
     robot.keyTap("space");
 }
