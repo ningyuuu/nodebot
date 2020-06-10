@@ -1,6 +1,6 @@
 const robot = require("robotjs");
 
-const runs = 8;
+const runs = 178;
 
 const moveClickAndWait = (x, y, delay) => {
     robot.setMouseDelay(Math.random() * 10 + 100);
@@ -11,7 +11,7 @@ const moveClickAndWait = (x, y, delay) => {
 
 const moveClick = (x, y) => {
     moveClickAndWait(x, y, 100);
-}
+} 
 
 const moveAndWait = (x, y, delay) => {
     robot.setMouseDelay(Math.random() * 10 + delay);
@@ -20,7 +20,7 @@ const moveAndWait = (x, y, delay) => {
 
 const clickAndWait = (delay) => {
     robot.setMouseDelay(Math.random() * 10 + delay);
-    robot.mouseClick();
+    robot.mouseClick(); 
 }
 
 const keyAndWait = (key, delay) => {
@@ -28,16 +28,26 @@ const keyAndWait = (key, delay) => {
     robot.keyTap(key);
 }
 
-for (let i = 0; i < runs; i++) {
-    console.log(`Superheat run no: ${i+1}/${runs}`);
-    moveClick(3520, 296);
-    moveClick(3520, 296);
-    moveClickAndWait(3520, 296, 2000);
-    keyAndWait('f3', 1000);
-    moveAndWait(4449, 612, 1000);
+const bankX = 3520;
+const bankY = 296;
 
-    for (let j = 0; j < 29; j++) {
-        keyAndWait('pagedown', 600);
-        moveClickAndWait(4448, 612, 700);
+const itemX = 4449;
+const itemY = 612;
+ 
+module.exports = (x) => {
+    for (let i = 0; i < runs; i++) {
+        console.log(`Clean herb run no: ${i+1}/${runs}`);
+        moveClick(bankX, bankY);
+        moveClick(bankX, bankY);
+        moveClickAndWait(bankX, bankY, 2000);
+        keyAndWait('f2', 2000);
+        moveClickAndWait(4449, 612, 200);
+        keyAndWait('space', 200);
+        keyAndWait('space', 200);
+        keyAndWait('space', 200);
+        keyAndWait('space', 200);
+        keyAndWait('space', 200);
+        keyAndWait('space', 200);
+        keyAndWait('space', 19000);
     }
 }

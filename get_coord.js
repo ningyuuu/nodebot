@@ -1,2 +1,6 @@
 const robot = require("robotjs");
-console.log(robot.getMousePos());
+
+module.exports = () => {
+    const coords = robot.getMousePos();
+    return `${coords.x}, ${coords.y}`;
+}

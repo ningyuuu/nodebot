@@ -1,6 +1,6 @@
 const robot = require("robotjs");
 
-const craftRuns = 20;
+const craftRuns = 18;
 
 const moveClickAndWait = (x, y, delay) => {
     robot.setMouseDelay(Math.random() * 10 + 100);
