@@ -7,13 +7,21 @@
 
 const $ = require("jquery");
 // const fs = require("fs");
-const melee = require('./clean_herb.js')
+const melee = require('./portable_well.js')
+const smelt = require('./smelt.js')
 const get_coord = require('./get_coord.js')
 
 $('#start').click(() => {
     const count = $("#runs").val()
     melee(count);
 })
+
+$('#smelt').click(() => {
+    const count = $("#smeltruns").val()
+    smelt(count);
+})
+
+
 
 $('#coords').click(() => {
     setTimeout(() => {
