@@ -9,6 +9,8 @@ const $ = require("jquery");
 // const fs = require("fs");
 const melee = require('./portable_well.js')
 const smelt = require('./smelt.js')
+const shaft = require('./osrs_shaft.js')
+const cut_shaft = require('./osrs_cut_shaft')
 const get_coord = require('./get_coord.js')
 
 $('#start').click(() => {
@@ -21,9 +23,18 @@ $('#smelt').click(() => {
     smelt(count);
 })
 
+$('#shaft').click(() => {
+    const count = $('#shaftruns').val();
+    shaft(count);
+})
 
+$('#cutshaft').click(() => {
+    const count = $('#cutshaftruns').val();
+    cut_shaft(count);
+})
 
 $('#coords').click(() => {
+    console.log('test');
     setTimeout(() => {
         const coords = get_coord();
         console.log(coords);
