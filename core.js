@@ -1,20 +1,27 @@
 const robot = require("robotjs");
 
-const moveClickAndWait = (x, y, delay) => {
+class Coords {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+const moveClickAndWait = (coord, delay) => {
     console.log('moveClickAndWait', x, y, delay)
     robot.setMouseDelay(Math.random() * 100 + 100);
-    robot.moveMouse(x + 20 * Math.random() - 10, y + 20 * Math.random() - 10);
+    robot.moveMouse(coord.x + 20 * Math.random() - 10, coord.y + 20 * Math.random() - 10);
     robot.setMouseDelay(Math.random() * 100 + delay);
     robot.mouseClick();
 }
 
-const moveClick = (x, y) => {
-    moveClickAndWait(x, y, 100);
+const moveClick = (coord) => {
+    moveClickAndWait(coord.x, coord.y, 100);
 }
 
-const moveAndWait = (x, y, delay) => {
+const moveAndWait = (coord, delay) => {
     robot.setMouseDelay(Math.random() * 10 + delay);
-    robot.moveMouse(x + 3 * Math.random() - 3, y + 3 * Math.random() - 3);
+    robot.moveMouse(coord.x + 3 * Math.random() - 3, coord.y + 3 * Math.random() - 3);
 }
 
 const clickAndWait = (delay) => {
@@ -33,5 +40,6 @@ module.exports = {
     moveClick,
     moveAndWait,
     clickAndWait,
-    keyAndWait
+    keyAndWait,
+    Coords
 }
