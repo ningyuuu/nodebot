@@ -2,10 +2,10 @@ const { moveClickAndWait, keyAndWait, Coords } = require('../core');
 
 module.exports = (x) => {
     const runs = x;
-    const bank = Coords(920, 482);
-    const willow = Coords(667, 149);
-    const wood = Coords(1319, 615);
-    const knife = Coords(1278, 614);
+    const bank = new Coords(920, 482);
+    const willow = new Coords(667, 149);
+    const wood = new Coords(1319, 615);
+    const knife = new Coords(1278, 614);
 
     for (let i = 0; i < runs; i++) {
         console.log(`Feathering run no: ${i + 1}/${runs}`);

@@ -8,7 +8,7 @@ class Coords {
 }
 
 const moveClickAndWait = (coord, delay) => {
-    console.log('moveClickAndWait', x, y, delay)
+    console.log('moveClickAndWait', coord.x, coord.y, delay)
     robot.setMouseDelay(Math.random() * 100 + 100);
     robot.moveMouse(coord.x + 20 * Math.random() - 10, coord.y + 20 * Math.random() - 10);
     robot.setMouseDelay(Math.random() * 100 + delay);

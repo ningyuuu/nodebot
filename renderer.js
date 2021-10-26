@@ -9,8 +9,9 @@ const $ = require("jquery");
 // const fs = require("fs");
 const melee = require('./portable_well.js')
 const smelt = require('./smelt.js')
-const shaft = require('./feather_shaft.js')
+const shaft = require('./osrs/feather_shaft.js')
 const cut_shaft = require('./osrs/cut_shaft')
+const grab_wine = require('./osrs/grab_wine')
 const get_coord = require('./get_coord.js')
 
 $('#start').click(() => {
@@ -31,6 +32,11 @@ $('#shaft').click(() => {
 $('#cutshaft').click(() => {
     const count = $('#cutshaftruns').val();
     cut_shaft(count);
+})
+
+$('#grabwine').click(() => {
+    const count = $('#grabwineruns').val();
+    grab_wine(count);
 })
 
 $('#coords').click(() => {

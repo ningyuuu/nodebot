@@ -2,8 +2,8 @@ const { moveClickAndWait, keyAndWait, Coords } = require('../core');
 
 module.exports = (x) => {
     const runs = x;
-    const shaft = Coords(1240, 617);
-    const feather = Coords(1278, 614);
+    const shaft = new Coords(1240, 617);
+    const feather = new Coords(1278, 614);
 
     for (let i = 0; i < runs; i++) {
         console.log(`Feathering run no: ${i + 1}/${runs}`);
