@@ -34,6 +34,11 @@ const keyAndWait = (key, delay) => {
     robot.setKeyboardDelay(Math.random() * 0.1 * delay + delay);
     robot.keyTap(key);
 }
+const keyToggleAndWait = (key, down, delay) => {
+    console.log('keyToggleAndWait', key, delay)
+    robot.setKeyboardDelay(Math.random() * 0.1 * delay + delay);
+    robot.keyToggle(key, down);
+}
 
 module.exports = {
     moveClickAndWait,
@@ -41,5 +46,6 @@ module.exports = {
     moveAndWait,
     clickAndWait,
     keyAndWait,
+    keyToggleAndWait,
     Coords
 }

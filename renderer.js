@@ -11,8 +11,11 @@ const melee = require('./portable_well.js')
 const smelt = require('./smelt.js')
 const shaft = require('./osrs/feather_shaft.js')
 const cut_shaft = require('./osrs/cut_shaft')
+const cut_longbow = require('./osrs/cut_longbow')
 const grab_wine = require('./osrs/grab_wine')
-const get_coord = require('./get_coord.js')
+const iron = require('./osrs/mine_drop_iron')
+const get_coord = require('./get_coord.js');
+const string_bow = require("./osrs/string_bow.js");
 
 $('#start').click(() => {
     const count = $("#runs").val()
@@ -34,11 +37,26 @@ $('#cutshaft').click(() => {
     cut_shaft(count);
 })
 
+$('#cutlongbow').click(() => {
+    const count = $('#cutlongbowruns').val();
+    cut_longbow(count);
+})
+
+$('#stringbow').click(() => {
+    const count = $('#stringbowruns').val();
+    string_bow(count);
+})
+
+
 $('#grabwine').click(() => {
     const count = $('#grabwineruns').val();
     grab_wine(count);
 })
 
+$('#iron').click(() => {
+    const count = $('#ironruns').val();
+    iron(count);
+})
 $('#coords').click(() => {
     console.log('test');
     setTimeout(() => {

@@ -3,7 +3,7 @@ const { moveClickAndWait, keyAndWait, Coords } = require('../core');
 module.exports = (x) => {
     const runs = x;
     const bank = new Coords(920, 482);
-    const willow = new Coords(667, 149);
+    const willow = new Coords(636, 143);
     const wood = new Coords(1319, 615);
     const knife = new Coords(1278, 614);
 
@@ -14,6 +14,6 @@ module.exports = (x) => {
         keyAndWait('escape', 1300);
         moveClickAndWait(knife, 1200);
         moveClickAndWait(wood, 1200);
-        keyAndWait('space', 60000);
+        keyAndWait('space', 50000);
     }
 }
